@@ -22,7 +22,8 @@ const instructions = Platform.select({
 
 export default class App extends Component<{}> {
   componentDidMount() {
-    // This will abort.
+    // Uncomment this and comment out the below initialization
+    // of ctxOptions for the app to abort.
     let ctxOptions = {
       items: Platform.select({
         'ios': ['Take Photo', 'Choose From Library', 'Cancel'],
@@ -36,7 +37,8 @@ export default class App extends Component<{}> {
       })
     }
 
-    // This will NOT abort
+    // Uncomment this and comment out the above initialization
+    // of ctxOptions for the app to NOT abort.
     // let ctxOptions = {
     //   items: ({
     //     'ios': ['Take Photo', 'Choose From Library', 'Cancel'],
